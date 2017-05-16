@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+</head>
+
+<body bgcolor="black">
+
+<div id="containter" style="display: flex; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%)">
+	<div id="nocturnal5"></div>
+	<div id="nocturnal6"></div>
+</div>
+
+<script>
+	var width = screen.width;
+	var vidsize = width / 2;
+	var options5 = {
+        id: 212620983,
+		quality: "1080p",
+        width: vidsize,
+        loop: true,
+		autoplay: true,
+		autopause: false,
+		byline: 0,
+		portrait: 0,
+		frameborder: 0,
+		title: 0
+    };
+	var player5 = new Vimeo.Player('nocturnal5', options5); 
+	player5.ready().then('play', function() {
+        console.log('played video 5!');
+    });
+</script>
+
+<script>
+	var width = screen.width;
+	var vidsizeB = width / 2;
+	var options6 = {
+        id: 212625461,
+		quality: "1080p",
+        width: vidsizeB,
+        loop: true,
+		autoplay: true,
+		autopause: false,
+		byline: 0,
+		portrait: 0,
+		frameborder: 0,
+		title: 0
+    };	
+	var player6 = new Vimeo.Player('nocturnal6', options6);
+	player6.ready().then('play', function() {
+        console.log('played video 6!');
+    });
+</script>
+
+</body>
+</html>
